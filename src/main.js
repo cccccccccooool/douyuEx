@@ -113,7 +113,6 @@ function initPkg() {
   initPkg_DanmakuCollect();
   initPkg_RestoreYuba();
   initPkg_ChangeDanmakuLengthLimit();
-  initPkg_AntiRepeatBarrage();
   initPkg_CheckAnchorPocket();
   initPkg_LastLiveTime();
   initPkg_VolumeMouseScrolling();
