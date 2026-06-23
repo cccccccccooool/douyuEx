@@ -23,6 +23,7 @@ async function initPkg_LiveTool_BarrageSendCheck() {
             if (data.txt.includes(`[DouyuEx图片`)) {
               data.txt = data.txt.replace(/\[DouyuEx图片[^\]]+\]/g, "").trim();
             }
+            data.txt = data.txt.replace(/[​‌‍﻿]/g, "");
             if (data.txt.replace(/\s+/g, " ") !== localLastBarrage.replace(/\s+/g, " ")) {
               let contentDom = dom.getElementsByClassName("Barrage-content")[0];
               contentDom.style.textDecoration = "line-through gray 1px";
