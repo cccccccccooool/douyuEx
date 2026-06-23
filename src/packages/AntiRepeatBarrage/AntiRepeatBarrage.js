@@ -17,7 +17,7 @@ function antiRepeatBarrage_enable() {
         if (!text || text.trim() === "") return;
         let clean = text.replace(/\u200B+$/, "");
         if (clean === antiRepeatLastText && clean !== "") {
-            antiRepeatCount++;
+            antiRepeatCount = antiRepeatCount === 0 ? 1 : 0;
             setBarrageValue(clean + "\u200B".repeat(antiRepeatCount));
             let textarea = document.querySelector("textarea.ChatSend-txt") || document.querySelector("div.ChatSend-txt");
             if (textarea) textarea.dispatchEvent(new Event("input", { bubbles: true }));
